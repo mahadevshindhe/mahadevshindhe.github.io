@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 1 — AI Foundations (Solution Architect)</title>
+  <meta name="description" content="Week 1 detailed learning plan: AI Foundations for Solution Architects. Daily schedule, deliverables, resources, mini-project." />
+
+  <!-- Simple, clean styles -->
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --maxw: 980px;
+      --radius:12px;
+      --gap:18px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071026 0%, #071b2b 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:24px;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:var(--gap);
+      align-items:start;
+    }
+    header{
+      grid-column:1 / -1;
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:6px;
+    }
+    .brand{
+      background:linear-gradient(90deg,#052431,#08344a);
+      border-radius:14px;
+      padding:12px 16px;
+      box-shadow:0 6px 20px rgba(3,10,18,0.6);
+      display:flex;
+      flex-direction:column;
+    }
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.2px}
+    .brand p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+    nav.card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:14px;
+      box-shadow:0 6px 24px rgba(2,8,15,0.5);
+      height:fit-content;
+      position:sticky;
+      top:28px;
+    }
+    nav h3{margin:0 0 8px;font-size:14px}
+    .nav-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+    .nav-list a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:14px;
+      padding:8px;
+      border-radius:8px;
+      display:block;
+    }
+    .nav-list a:hover{background:var(--glass);color:#dff6fb}
+    main{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 10px 30px rgba(2,8,15,0.6);
+      min-height:60vh;
+    }
+    .section{
+      margin-bottom:18px;
+      border-radius:10px;
+      padding:14px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .section h2{margin:0 0 8px;font-size:18px}
+    .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px;margin-bottom:8px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)
+    }
+    ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:6px 0}
+    .actionbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--accent);
+      padding:8px 12px;border-radius:8px;font-weight:600;font-size:14px;
+      text-decoration:none;
+    }
+    .muted{color:var(--muted);font-size:13px}
+    footer{grid-column:1/-1;margin-top:10px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:900px){
+      .container{grid-template-columns:1fr; padding-bottom:60px}
+      nav.card{position:static}
+      .grid{grid-template-columns:1fr}
+    }
+    /* Print friendly */
+    @media print{
+      body{background:white;color:black;padding:0}
+      main, nav.card{box-shadow:none;background:transparent;border:0}
+    }
+    /* small helpers */
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:600;color:var(--muted);font-size:12px}
+    details summary{cursor:pointer;outline:none}
+    .code{
+      background:rgba(0,0,0,0.25);
+      padding:8px;border-radius:6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:13px;
+      color:#dff6fb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand">
+        <h1>AI Foundations — Week 1</h1>
+        <p>Learning plan for Solution Architects — Daily schedule & deliverables</p>
+      </div>
+      <div style="flex:1"></div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <div class="pill">Duration: 1 week</div>
+        <div class="pill">Outcome: Architect-ready artifacts</div>
+      </div>
+    </header>
+
+    <!-- Left nav -->
+    <nav class="card" aria-label="Week navigation">
+      <h3>Contents</h3>
+      <ul class="nav-list">
+        <li><a href="#day1">Day 1 — Fundamentals</a></li>
+        <li><a href="#day2">Day 2 — Lifecycle</a></li>
+        <li><a href="#day3">Day 3 — Patterns</a></li>
+        <li><a href="#day4">Day 4 — Integration</a></li>
+        <li><a href="#day5">Day 5 — Risks & Governance</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#mini">Mini-Project</a></li>
+        <li><a href="#deliverable">Final Deliverable</a></li>
+      </ul>
+
+      <div style="height:10px"></div>
+      <div class="muted">Quick actions</div>
+      <div class="actionbar" style="margin-top:8px">
+        <a class="btn" href="#mini">Start Mini-Project</a>
+        <a class="btn" href="#resources">Open Resources</a>
+        <a class="btn" href="#" onclick="window.print();return false">Print</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+      <section class="section" id="overview">
+        <div class="meta"><strong>Week 1</strong><span class="muted">• Theme: AI Foundations for Solution Architects</span></div>
+        <h2>Overview</h2>
+        <p class="muted">This week gives you a systems-level view of Artificial Intelligence: definitions, the end-to-end lifecycle, common architecture patterns, integration approaches, and governance considerations. Each day has hands-on exercises and an artifact to produce. By week-end you'll have an architect-ready 3–5 page deliverable that becomes your foundation for Week 2.</p>
+      </section>
+
+      <section class="section" id="day1">
+        <h2>Day 1 — AI Fundamentals (Architect's Perspective)</h2>
+        <div class="meta"><span class="muted">Goal:</span> Understand AI as an architectural capability</div>
+        <div class="grid" style="margin-top:10px">
+          <div class="card">
+            <h3>Topics</h3>
+            <ul>
+              <li>AI, ML, DL definitions (architect-focused)</li>
+              <li>AI vs deterministic software</li>
+              <li>Predictive vs Generative AI</li>
+              <li>AI as a system component</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hands-on</h3>
+            <ul>
+              <li>Write a 1-paragraph: “What is AI from an architect’s lens?”</li>
+              <li>List 5 AI use cases in your domain</li>
+            </ul>
+            <div style="margin-top:8px"><strong>Deliverable:</strong> 1-page summary — “AI as an architectural capability in my enterprise landscape.”</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="day2">
+        <h2>Day 2 — AI System Lifecycle (End-to-End)</h2>
+        <div class="meta"><span class="muted">Goal:</span> Learn phases of building & operating AI systems</div>
+        <div class="grid" style="margin-top:10px">
+          <div class="card">
+            <h3>Topics</h3>
+            <ul>
+              <li>Data collection → preparation → training → validation → deployment → monitoring</li>
+              <li>Feedback loops, model decay & concept drift</li>
+              <li>Offline pipelines vs online inference</li>
+              <li>Batch vs real-time workloads</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hands-on</h3>
+            <ul>
+              <li>Draw an AI lifecycle diagram (annotate where architect decisions happen)</li>
+              <li>Mark infra, integration, and data quality decision points</li>
+            </ul>
+            <div style="margin-top:8px"><strong>Deliverable:</strong> AI Lifecycle Diagram (architect version)</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="day3">
+        <h2>Day 3 — AI Architecture Patterns</h2>
+        <div class="meta"><span class="muted">Goal:</span> Learn common patterns used in modern AI systems</div>
+        <div class="grid" style="margin-top:10px">
+          <div class="card">
+            <h3>Topics</h3>
+            <ul>
+              <li>3-layer AI architecture: Data → Model → App</li>
+              <li>Online vs Offline architectures</li>
+              <li>Centralized vs Decentralized model serving</li>
+              <li>Hybrid (rules + AI) architectures</li>
+              <li>Inference patterns: sync / async / batch / streaming</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hands-on</h3>
+            <ul>
+              <li>Draw a high-level architecture for one use case: fraud detection, recommender, or chat assistant</li>
+            </ul>
+            <div style="margin-top:8px"><strong>Deliverable:</strong> High-level AI Architecture Diagram</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="day4">
+        <h2>Day 4 — AI in Enterprise Architecture & System Integration</h2>
+        <div class="meta"><span class="muted">Goal:</span> Learn how AI plugs into existing landscapes</div>
+        <div class="grid" style="margin-top:10px">
+          <div class="card">
+            <h3>Topics</h3>
+            <ul>
+              <li>AI as microservice / API-based inference</li>
+              <li>Managed services vs custom stacks</li>
+              <li>Event-driven systems, lakehouses, orchestration</li>
+              <li>Latency, cost, throughput, GPU constraints</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hands-on</h3>
+            <ul>
+              <li>Pick a live system and sketch "before" and "after" AI integration diagrams</li>
+            </ul>
+            <div style="margin-top:8px"><strong>Deliverable:</strong> Enterprise Integration Blueprint</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="day5">
+        <h2>Day 5 — AI Limitations, Risks & Governance</h2>
+        <div class="meta"><span class="muted">Goal:</span> Identify risks and architect governance controls</div>
+        <div class="grid" style="margin-top:10px">
+          <div class="card">
+            <h3>Topics</h3>
+            <ul>
+              <li>Hallucinations, bias, reliability, explainability</li>
+              <li>Responsible AI principles and policies</li>
+              <li>Security: prompt injection, data leakage</li>
+              <li>When NOT to use AI</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hands-on</h3>
+            <ul>
+              <li>Create a checklist: "Is AI the right solution?"</li>
+              <li>Build a risk register for one chosen use case</li>
+            </ul>
+            <div style="margin-top:8px"><strong>Deliverable:</strong> AI Risk & Governance Checklist + Do/Don't Decision Matrix</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="resources">
+        <h2>Resources (short list)</h2>
+        <div class="grid" style="margin-top:10px">
+          <div class="card">
+            <h3>Must-read (short)</h3>
+            <ul>
+              <li><strong>Google:</strong> Rules of ML (read overview)</li>
+              <li><strong>Microsoft:</strong> Responsible AI Standard (overview)</li>
+              <li><strong>AWS:</strong> ML Lens (architecture guide)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Video / Courses</h3>
+            <ul>
+              <li>DeepLearning.AI — AI for Everyone (intro)</li>
+              <li>Stanford CS224n (Transformers) — recommended sections later</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mini">
+        <h2>Mini-Project (Week-long)</h2>
+        <p class="muted">Combine your artifacts into a single 3–5 page document that becomes your Week 1 deliverable.</p>
+        <div class="grid" style="margin-top:8px">
+          <div class="card">
+            <h3>Mini-Project Checklist</h3>
+            <ul>
+              <li>One-page: AI in my enterprise landscape</li>
+              <li>AI lifecycle diagram (annotated)</li>
+              <li>High-level architecture examples</li>
+              <li>Before/After integration blueprint</li>
+              <li>Risk & governance checklist</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Presentation</h3>
+            <ul>
+              <li>Prepare a 10–12 slide deck summarizing the deliverable</li>
+              <li>Keep visuals simple: diagrams, bullets, decision matrix</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="deliverable">
+        <h2>Final Deliverable (End of Week)</h2>
+        <p class="muted">A consolidated 3–5 page architect-ready document + a short presentation. Use the deliverable as your Week 2 kickoff artifact.</p>
+        <details>
+          <summary><strong>Deliverable structure (expand)</strong></summary>
+          <ol style="margin-top:10px;color:var(--muted)">
+            <li>Executive summary: what AI capability you propose</li>
+            <li>AI lifecycle diagram with decision points</li>
+            <li>Architecture diagrams (2 examples)</li>
+            <li>Integration blueprint & system impact</li>
+            <li>Risk register, governance checklist & Do/Don't matrix</li>
+            <li>Next steps & recommended Week 2 focus</li>
+          </ol>
+        </details>
+      </section>
+
+      <section class="section" id="howto">
+        <h2>How to use this page on GitHub Pages</h2>
+        <ul>
+          <li>Save this file as <code class="code">index.html</code> at your repo root.</li>
+          <li>Push to GitHub and enable Pages (Repository → Settings → Pages → Source: main branch / root).</li>
+          <li>Alternatively, create a <code class="code">gh-pages</code> branch and enable Pages from that branch.</li>
+        </ul>
+      </section>
+
+      <footer>
+        Built for: <strong>Solution Architect</strong> • Week 1 — AI Foundations • Generated by ChatGPT
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
