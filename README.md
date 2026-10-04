@@ -1,22 +1,19 @@
-# Mahadeva Shindhe — Personal Website
+# Mahadeva Shindhe — Professional Portfolio
 
-A responsive, dependency-light personal portfolio site designed for GitHub Pages.
+A responsive GitHub Pages portfolio for Mahadeva Shindhe, positioned around Solution Architecture, Java, AWS cloud modernization, Kubernetes/EKS and enterprise technology.
 
-## Deploy to GitHub Pages
+## Files
+- `index.html` — portfolio page
+- `styles.css` — responsive visual design
+- `script.js` — navigation and small interactions
+- `profile.jpg` — profile photograph supplied by Mahadeva Shindhe
 
-1. Create a GitHub repository, e.g. `mahadeva-shindhe.github.io` (or any repo if you prefer a project site).
-2. Upload `index.html`, `styles.css`, `script.js`, and this README.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)` folder, then save.
-6. GitHub will publish the site at your Pages URL.
+## GitHub Pages
+1. Create a GitHub repository (for example `mahadeva-shindhe.github.io`).
+2. Upload all files in this folder to the repository root.
+3. Go to **Settings → Pages**.
+4. Select **Deploy from a branch**, choose `main`, and select `/ (root)`.
+5. Save and open the published GitHub Pages URL.
 
 ## Customize
-
-- Update the LinkedIn URL in `index.html` if your public profile URL changes.
-- Replace/add project case studies when you want to showcase specific architecture work.
-- Add a profile photo or downloadable resume later if desired.
-
-## Design direction
-
-Executive technology portfolio: dark navy + mint accent, editorial typography, architecture-inspired visual system, responsive layout, and no framework dependency.
+Update the experience wording, dates, employer/client names, certifications and resume link as desired. The site deliberately avoids inventing specific dates or credentials.
